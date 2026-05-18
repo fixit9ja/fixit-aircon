@@ -1,0 +1,46 @@
+.hero { position:relative; min-height:50vh; display:flex; align-items:flex-end; overflow:hidden; }
+.heroBg { position:absolute; inset:0; }
+.heroBg img { width:100%; height:100%; object-fit:cover; }
+.heroMask { position:absolute; inset:0; background:linear-gradient(to top, rgba(3,4,94,0.96) 0%, rgba(0,119,182,0.65) 100%); }
+.heroContent { position:relative; z-index:2; padding:120px 0 56px; }
+.heroContent h1 { font-size:clamp(2.6rem,5vw,4.5rem); font-weight:900; text-transform:uppercase; color:var(--white); margin-bottom:14px; }
+.heroContent p { font-size:1.05rem; color:rgba(255,255,255,0.72); max-width:520px; }
+
+.story { padding:100px 0; background:var(--white); }
+.storyGrid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+.storyGrid p { color:var(--muted); line-height:1.78; font-size:0.97rem; }
+.storyImg img { width:100%; height:460px; object-fit:cover; border-radius:var(--r-md); box-shadow:var(--sh-lg); border-left:4px solid var(--ice); }
+
+.mission { padding:100px 0; background:var(--off); }
+.missionGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; }
+.mCard { background:var(--white); padding:36px 28px; border-top:4px solid var(--navy); position:relative; transition:box-shadow 0.2s; }
+.mCard:hover { box-shadow:var(--sh-md); }
+.mNum { font-family:var(--font-head); font-size:4rem; font-weight:900; color:var(--light); position:absolute; top:12px; right:16px; line-height:1; }
+.mCard h3 { font-family:var(--font-head); font-size:1.5rem; font-weight:900; text-transform:uppercase; color:var(--navy); margin-bottom:14px; }
+.mCard p { font-size:0.92rem; color:var(--muted); line-height:1.75; }
+.valList { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.valList li { display:flex; gap:10px; font-size:0.92rem; color:var(--muted); }
+.valList li span { color:var(--ice); font-weight:700; }
+
+.team { padding:80px 0; background:var(--white); }
+.team h2 { margin-bottom:36px; }
+.teamGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; }
+.teamCard { display:flex; flex-direction:column; background:var(--off); border-left:4px solid var(--ice); transition:all 0.25s; }
+.teamCard:hover { border-left-color:var(--deep); transform:translateX(4px); box-shadow:var(--sh-md); }
+.teamDept { padding:5px 14px; background:var(--ice); color:var(--white); font-family:var(--font-head); font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; align-self:flex-start; }
+.teamInfo { padding:20px 22px; }
+.teamInfo h3 { font-family:var(--font-head); font-size:1.1rem; font-weight:800; text-transform:uppercase; color:var(--navy); margin-bottom:4px; }
+.teamInfo span { font-size:0.82rem; color:var(--muted); }
+
+.brandSect { padding:80px 0; background:linear-gradient(135deg, var(--dark), var(--navy)); }
+.brandSect h2 { margin-bottom:32px; }
+.brandGrid { display:flex; flex-wrap:wrap; gap:12px; }
+.brandChip { padding:10px 22px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:var(--r-sm); font-family:var(--font-head); font-size:0.9rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--white); transition:all 0.2s; }
+.brandChip:hover { background:rgba(0,174,239,0.15); border-color:var(--ice); color:var(--ice); }
+
+.cta { padding:72px 0; background:var(--ice); text-align:center; }
+.cta h2 { font-family:var(--font-head); font-size:2.6rem; font-weight:900; text-transform:uppercase; color:var(--white); margin-bottom:12px; }
+.cta p { color:rgba(255,255,255,0.85); font-size:1.05rem; }
+.cta .btn-ice { background:var(--white); color:var(--navy); }
+
+@media(max-width:900px) { .storyGrid{grid-template-columns:1fr;} .missionGrid{grid-template-columns:1fr;} .teamGrid{grid-template-columns:1fr;} }

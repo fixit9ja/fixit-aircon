@@ -1,0 +1,61 @@
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 10px 0 0;
+  transition: all 0.3s ease;
+}
+.solid {
+  background: rgba(3,4,94,0.97);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+}
+.iceLine { height: 3px; background: linear-gradient(90deg, var(--ice), var(--deep), var(--navy)); margin-top: 10px; }
+
+.inner { display: flex; align-items: center; gap: 20px; }
+
+.logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+.logoImg {
+  height: 64px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.nav { margin-left: auto; }
+.nav ul { display: flex; align-items: center; gap: 2px; list-style: none; }
+.link {
+  position: relative; display: block; padding: 8px 14px;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.95rem;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s;
+}
+.link:hover { color: var(--white); }
+.active { color: var(--ice) !important; }
+.bar {
+  position: absolute; bottom: 4px; left: 14px; right: 14px;
+  height: 2px; background: var(--ice);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.link:hover .bar, .active .bar { transform: scaleX(1); }
+
+.callBtn { padding: 9px 20px; font-size: 0.88rem; flex-shrink: 0; }
+
+.burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px; margin-left: auto;
+}
+.burger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; }
+.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed; top: 0; right: -100%; bottom: 0; width: 260px;
+    background: var(--dark); border-left: 3px solid var(--ice);
+    padding: 100px 28px 28px; transition: right 0.35s ease; margin: 0;
+  }
+  .nav.open { right: 0; }
+  .nav ul { flex-direction: column; align-items: flex-start; gap: 0; }
+  .link { font-size: 1.3rem; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); width: 100%; }
+  .burger { display: flex; }
+  .callBtn { display: none; }
+}
