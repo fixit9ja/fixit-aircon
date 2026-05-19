@@ -3,7 +3,7 @@
 .grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 40px; }
 
 .brand {}
-.logo { height: 80px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); margin-bottom: 16px; }
+.logo { height: 160px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); margin-bottom: 16px; }
 .brand p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
 .parent { display: flex; align-items: center; gap: 10px; }
 .parent span { font-size: 0.75rem; color: rgba(255,255,255,0.4); font-style: italic; }
