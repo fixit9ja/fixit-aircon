@@ -14,7 +14,7 @@
 
 .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .logoImg {
-  height: 64px; width: auto; object-fit: contain;
+  height: 192px; width: auto; object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
 }
 
@@ -58,4 +58,5 @@
   .link { font-size: 1.3rem; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); width: 100%; }
   .burger { display: flex; }
   .callBtn { display: none; }
+  .logoImg { height: 120px; }
 }
